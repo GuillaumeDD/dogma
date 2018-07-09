@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>160</x>
+      <y>16</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/EventDescription/
+--
+--
++ neg: EventDescription
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>200</y>
+      <w>192</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/StraigthforwardEventDescription/
+--
+--
++ event: Event
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>64</x>
+      <y>48</y>
+      <w>184</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>168;24;168;128;24;128;24;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>16</x>
+      <y>280</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>EventToEventDescription</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>64</x>
+      <y>232</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>208</x>
+      <y>200</y>
+      <w>520</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/GenericDialogueActEventDescription[VariableType, GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content: Variable[VariableType]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>48</y>
+      <w>280</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;128;264;128;264;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>208</x>
+      <y>312</y>
+      <w>200</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/DialogueActEventDescription[...]/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>256</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>192;24;192;40;24;40;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>464</x>
+      <y>312</y>
+      <w>264</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/ConstrainedDialogueActEventDescription[...]/
+--
+--
++ constraint: SemanticConstraint[VariableType]
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>448</x>
+      <y>256</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;40;152;40;152;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>744</x>
+      <y>200</y>
+      <w>696</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/GenericNonStandardDialogueActEventDescription[VariableType1, VariableType2, GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content1: Variable[VariableType1]
++ content2: Variable[VariableType2]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>48</y>
+      <w>904</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;128;888;128;888;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1456</x>
+      <y>200</y>
+      <w>696</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/GenericLeftNonStandardDialogueActEventDescription[VariableType1, VariableType2, GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content1: VariableType1
++ content2: Variable[VariableType2]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2168</x>
+      <y>200</y>
+      <w>696</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/RightNonStandardDialogueActEventDescription[VariableType1, VariableType2, GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content1: Variable[VariableType1]
++ content2: VariableType2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>48</y>
+      <w>1616</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;128;1600;128;1600;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>48</y>
+      <w>2320</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;128;2304;128;2304;152</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>104</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Negation
+--
+--
++ isNegation: Boolean
++ neg: EventDescription
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>8</y>
+      <w>282</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+&lt;negates</panel_attributes>
+    <additional_attributes>24;24;240;24;240;128;144;128</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>48</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;40;152;40;152;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>8</x>
+      <y>416</y>
+      <w>472</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/AbstractGamePropositionEventDescription[GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content: VariableCombination</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>176</x>
+      <y>152</y>
+      <w>40</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;264</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>176</x>
+      <y>152</y>
+      <w>600</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;240;584;240;584;264</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1456</x>
+      <y>320</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/LeftNonStandardDialogueActEventDescription[...]/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1576</x>
+      <y>272</y>
+      <w>248</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>232;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1768</x>
+      <y>320</y>
+      <w>376</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/ConstrainedLeftNonStandardDialogueActEventDescription[...]/
+--
+--
++ constraint: SemanticConstraint[(VariableType1, VariableType2)]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1784</x>
+      <y>272</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;176;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2168</x>
+      <y>320</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/RightNonStandardDialogueActEventDescription[...]/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2480</x>
+      <y>320</y>
+      <w>376</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/ConstrainedRightNonStandardDialogueActEventDescription[...]/
+--
+--
++ constraint: SemanticConstraint[(VariableType1, VariableType2)]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2496</x>
+      <y>272</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;176;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2288</x>
+      <y>272</y>
+      <w>248</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>232;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>744</x>
+      <y>312</y>
+      <w>264</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/NonStandardDialogueActEventDescription[...]/
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1056</x>
+      <y>312</y>
+      <w>384</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt; &lt;&lt;sealed&gt;&gt;
+/ConstrainedNonStandardDialogueActEventDescription[...]/
+--
+--
++ constraint: SemanticConstraint[(VariableType1, VariableType2)]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>856</x>
+      <y>272</y>
+      <w>248</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>232;24;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1064</x>
+      <y>272</y>
+      <w>200</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;184;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>496</x>
+      <y>416</y>
+      <w>520</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/CompositeGamePropositionMatcherEventDescription[GeneratedType &lt;: EventDescription]/
+--
+--
++ locutor: Interlocutor
++ name: String
++ content: CompositeGamePropositionMatcher
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

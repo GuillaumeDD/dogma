@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>54</y>
+      <w>153</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>/SemanticConstraint[T]/
+--
+--
++ name: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>9</x>
+      <y>162</y>
+      <w>279</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/SemanticQuestionConstraint[PropContent]/
+--
+--
++ question: QuestionType
++ variable: Variable[PropContent]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>126</x>
+      <y>72</y>
+      <w>179</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>162;27;27;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>306</x>
+      <y>162</y>
+      <w>324</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/CorrectionConstraint[(PropContent, PropContent)]/
+--
+--
++ variable1: Variable[PropContent]
++ variable2: Variable[PropContent]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>261</x>
+      <y>72</y>
+      <w>251</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;234;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>648</x>
+      <y>162</y>
+      <w>432</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>/SemiInstantiatedCorrectionConstraint[(PropContent, PropContent)]/
+--
+--
++ content1: PropContent
++ variable2: Variable[PropContent]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>261</x>
+      <y>72</y>
+      <w>593</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;576;90</additional_attributes>
+  </element>
+</diagram>

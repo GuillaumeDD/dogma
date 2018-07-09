@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>300</x>
+      <y>110</y>
+      <w>460</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Triggerable
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/+ persistent: Boolean/
+/+ isViolatedBy(e: Event): Boolean/
+/+ isConcernedBy(e: Event): Boolean/
+/+ isTriggeredBy(e: Event): Boolean/
+/+ expects(a: Event): Boolean/
+/+ forbids(a: Event): Boolean/
+/+ operationToExecute(e: Event): Option[Operation]/
+/+ expectedEvent(): List[EventDescription]/
+/+ expectedDescription(): Option[Description]/
+&lt;&lt;impl&gt;&gt;
++ expectsOrForbids(a: Event): Boolean
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>390</y>
+      <w>460</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;like&gt;&gt;
+Untriggered
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;impl&gt;&gt;
++ persistent: Boolean
++ isViolatedBy(e: Event): Boolean
++ isConcernedBy(e: Event): Boolean
++ isTriggeredBy(e: Event): Boolean
++ expects(a: Event): Boolean
++ forbids(a: Event): Boolean
++ operationToExecute(e: Event): Option[Operation]
++ expectedEvent(): List[EventDescription]
++ expectedDescription(): Option[Description]
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>330</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
+  </element>
+</diagram>

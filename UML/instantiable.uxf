@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>328</x>
+      <y>16</y>
+      <w>280</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Instantiable[+T]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/+ instantiateWith(s: InstantiationSet): T/
+/+ isInstantiableWith(s: InstantiationSet): Boolean/
+/+ variables: Set[InstantiationVariable]/
+&lt;&lt;implemented&gt;&gt;
++ containsInstantiationVariable: Boolean
++ instantiated: Boolean
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>600</x>
+      <y>424</y>
+      <w>256</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+InstantiatedGenerator[This, Trigger]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+# bindingsImpl(t: Trigger): InstantiationSet
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>616</x>
+      <y>296</y>
+      <w>288</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+Instantiated[+This]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
++ instantiateWith(s: InstantiationSet): T
++ isInstantiableWith(s: InstantiationSet): Boolean
++ variables: Set[InstantiationVariable]
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>312</x>
+      <y>184</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Variable[T]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/+ name: String/
+&lt;&lt;impl&gt;&gt;
++ isInstantiableWith(s: InstantiationSet): Boolean
++ variables: Set[InstantiationVariable]
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>24</x>
+      <y>184</y>
+      <w>248</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Generator[+T, Trigger]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/+ fits(t: Trigger): Boolean/
+/+ bindings(t: Trigger): InstantiationSet/
+&lt;&lt;implemented&gt;&gt;
++ generate(t: Trigger): T
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>120</y>
+      <w>344</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>328;24;328;48;24;48;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>640</x>
+      <y>16</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+InstantiationSet
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+/+ isBound(v: Variable[_]): Boolean/
+/+ binding[T](v: Variable[T]): Option[T]/
+/+ +[T](v: Variable[T], e: T): InstantiationSet/
+/+ ++(instSet: InstantiationSet): InstantiationSet/
+/# allBindings: List[(InstantiationVariable, Any)]/
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>120</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>120</y>
+      <w>352</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48;336;48;336;96;336;176</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>264</y>
+      <w>560</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;136;544;136;544;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>712</x>
+      <y>344</y>
+      <w>72</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>56;24;56;56;24;56;24;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>296</y>
+      <w>280</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+InstantiableProxy[+T, Content]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/# instantiable: Instantiable[Content]/
+/# update(instantiable: Content): T/
+&lt;&lt;impl&gt;&gt;
++ instantiateWith(s: InstantiationSet): T
++ isInstantiableWith(s: InstantiationSet): Boolean
++ variables: Set[InstantiationVariable]
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>120</y>
+      <w>656</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48;640;48;640;176</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1208</x>
+      <y>296</y>
+      <w>344</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+InstantiableDuoProxy[+T, Content1, Content2]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/# instantiable1: Instantiable[Content1]/
+/# instantiable2: Instantiable[Content2]/
+/# update(instantiable1: Content, instantiable2: Content): T/
+&lt;&lt;impl&gt;&gt;
++ instantiateWith(s: InstantiationSet): T
++ isInstantiableWith(s: InstantiationSet): Boolean
++ variables: Set[InstantiationVariable]
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>120</y>
+      <w>968</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48;952;48;952;176</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>24</x>
+      <y>424</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+GeneratorProxy[+T, Trigger, Content]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+&lt;&lt;abstract&gt;&gt;
+/# generator: Generator[Content, Trigger]/
+&lt;&lt;impl&gt;&gt;
++ fits(t: Trigger): Boolean
++ bindings(t: Trigger): InstantiationSet
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>264</y>
+      <w>40</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>328</x>
+      <y>424</y>
+      <w>248</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;impl&gt;&gt;
+NonGenerator[This, Trigger]
+--
+//-id: Long
+//_-ClassAttribute: Long_
+--
+# bindingsImpl(t: Trigger): InstantiationSet
++ fits(e: Trigger): Boolean
+//--
+//Responsibilities
+//-- Resp1
+//*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>128</x>
+      <y>264</y>
+      <w>336</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;136;320;136;320;160</additional_attributes>
+  </element>
+</diagram>

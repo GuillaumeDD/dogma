@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>136</x>
+      <y>0</y>
+      <w>248</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+DialogueGameReasoning
+--
+--
+/+ update(/
+/     instance: DialogueGameInstance,/
+/     state: Set[GameActionCommitment])/
+/+ play(): (Boolean, Option[DialogicEvent])/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>128</y>
+      <w>520</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+InitiatorOpenInterrogation
+{this: DialogueGameModule}
+--
+--
+&lt;&lt;impl&gt;&gt;
++ update(...)
++ play(): (Boolean, Option[DialogicEvent])
+&lt;&lt;abstract&gt;&gt;
+/# playSuccessfulEntry(goal: QuestionType): Option[DialogicEvent]/
+/# playWaiting(goal: QuestionType)/
+/# interpretAnswer(goal: QuestionType, partner: Interlocutor, answerContent: PropContent)/
+/# interpretIgnorance(goal: QuestionType, partner: Interlocutor)/
+/# successReached(goal: QuestionType, partner: Interlocutor, answerContent: PropContent)/
+/# failureReached(goal: QuestionType, partner: Interlocutor)/
+&lt;&lt;helper&gt;&gt;
+# generateQuestion(goal: QuestionType): SetQuestion[QuestionType]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>232</x>
+      <y>72</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;56;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>56</x>
+      <y>320</y>
+      <w>40</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>560</x>
+      <y>128</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt;
+ResponseInterpretationStrategies
+{this: PatternReasonerThing}
+--
+--
+&lt;&lt;abstract&gt;&gt;
+/# interpretAnswer(goal: QuestionType,/
+/    partner: Interlocutor,/
+/    answerContent: PropContent)/
+/# interpretIgnorance(goal: QuestionType,/
+/    partner: Interlocutor)/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>840</x>
+      <y>128</y>
+      <w>256</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt;
+EvaluationStrategy
+{this: PatternReasonerThing}
+--
+--
+&lt;&lt;abstract&gt;&gt;
+/# evaluate(goal: QuestionType,/
+/    partner: Interlocutor,/
+/    answerContent: PropContent)/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>560</x>
+      <y>296</y>
+      <w>256</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+TrivialInterpretationAnswer
+{this: PatternReasonerThing}
+--
+--
+&lt;&lt;impl&gt;&gt;
+# interpretAnswer(...)
+# interpretIgnorance(...)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>232</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>840</x>
+      <y>296</y>
+      <w>256</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+SkepticalEvaluation
+{this: PatternReasonerThing} 
+--
+--
+&lt;&lt;impl&gt;&gt;
+# evaluate(...)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>208</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>752</x>
+      <y>424</y>
+      <w>200</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Affichage sur la sortie standard :
+println(...)
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1104</x>
+      <y>296</y>
+      <w>256</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+CredulousEvaluation
+{this: PatternReasonerThing} 
+--
+--
+&lt;&lt;impl&gt;&gt;
+# evaluate(...)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>208</y>
+      <w>312</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;56;296;56;296;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>336</y>
+      <w>192</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;176;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>672</x>
+      <y>352</y>
+      <w>184</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;168;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>816</x>
+      <y>344</y>
+      <w>80</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>64;24;24;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>816</x>
+      <y>344</y>
+      <w>336</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>320;24;24;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>536</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt; &lt;&lt;trait&gt;&gt;
+MockupOpenInterrogationPatternReasoner
+{this: PatternReasonerDialogicalAgent}
+
+{innerclass
+MockupInitiatorOpenInterrogation
+--
+--
+&lt;&lt;impl&gt;&gt;
+# playSuccessfulEntry(goal: QuestionType): Option[DialogicEvent]
+# playWaiting(goal: QuestionType)
+# interpretAnswer(goal: QuestionType, partner: Interlocutor, answerContent: PropContent)
+# interpretIgnorance(goal: QuestionType, partner: Interlocutor)
+# successReached(goal: QuestionType, partner: Interlocutor, answerContent: PropContent)
+# failureReached(goal: QuestionType, partner: Interlocutor)
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>232</y>
+      <w>456</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>440;24;440;48;296;48;296;136;24;136;24;168</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>208</y>
+      <w>736</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>720;24;720;72;296;72;296;160;24;160;24;192</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>176</x>
+      <y>416</y>
+      <w>592</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;80;576;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>576</x>
+      <y>520</y>
+      <w>200</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1) Evaluation (via Strategy)
+2) Désactivation
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>488</x>
+      <y>512</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;88;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>360</x>
+      <y>592</y>
+      <w>216</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>1) Affichage sur la sortie standard
+2) Désactivation
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>304</x>
+      <y>528</y>
+      <w>72</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;56;64</additional_attributes>
+  </element>
+</diagram>

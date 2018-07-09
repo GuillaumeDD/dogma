@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>7</x>
+      <y>161</y>
+      <w>217</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+DialogueGameReasoning
+--
+--
+/+ update(/
+/     instance: DialogueGameInstance,/
+/     state: Set[GameActionCommitment])/
+/+ play(): (Boolean, Option[DialogicEvent])/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>84</x>
+      <y>224</y>
+      <w>41</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>28;21;28;49;21;49</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>273</y>
+      <w>448</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+PartnerOpenInterrogation
+--
+--
+&lt;&lt;impl&gt;&gt;
++ update(...)
++ play(): (Boolean, Option[DialogicEvent])
+&lt;&lt;abstract&gt;&gt;
+/# playWaiting()/
+/# interpretQuestion(q: QuestionType, initiator: Interlocutor)/
+/# generateResponse(q: QuestionType, resolves: PropContent =&gt; Boolean): DialogicEvent/
+/# successReached(q: QuestionType, answerContent: PropContent)/
+/# failureReached(q: QuestionType)/
+
+&lt;&lt;helper&gt;&gt;
+# generateAnswer(answerContent: PropContent): Answer[PropContent]
+# generateExecNegativeAutoFB(): ExecNegativeAutoFB[QuestionType]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>98</x>
+      <y>427</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;21;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>581</x>
+      <y>273</y>
+      <w>196</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt;
+QuestionInterpretationStrategy
+{this: PatternReasonerThing}
+--
+--
+&lt;&lt;abstract&gt;&gt;
+/# interpretQuestion(q: QuestionType)/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1001</x>
+      <y>273</y>
+      <w>266</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt;
+ContentGeneratorStrategy
+{this: PatternReasonerThing}
+--
+--
+&lt;&lt;abstract&gt;&gt;
+/# generateContent(q: QuestionType): PropContent/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>868</x>
+      <y>378</y>
+      <w>259</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+Honest
+{this: PatternReasonerDialogicalAgent with Reasoning}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1141</x>
+      <y>378</y>
+      <w>252</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+Lyer
+{this: PatternReasonerDialogicalAgent with Lying}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>980</x>
+      <y>322</y>
+      <w>167</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>154;21;154;35;21;35;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1113</x>
+      <y>322</y>
+      <w>167</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;21;35;154;35;154;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>462</x>
+      <y>378</y>
+      <w>196</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+SocialInterpretationQuestion
+{this: PatternReasonerDialogicalAgent}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>665</x>
+      <y>378</y>
+      <w>196</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;strategy&gt;&gt; &lt;&lt;impl&gt;&gt;
+IntrovertInterpretationQuestion
+{this: PatternReasonerDialogicalAgent}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>539</x>
+      <y>322</y>
+      <w>139</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>126;21;126;35;21;35;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>644</x>
+      <y>322</y>
+      <w>139</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;21;35;126;35;126;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>42</y>
+      <w>175</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;ability&gt;&gt;
+Lying
+--
+# Type LyingInput
+# Type LyingOutput
+--
+# lie(c: LyingInput): LyingOutput</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>812</x>
+      <y>42</y>
+      <w>238</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt; &lt;&lt;ability&gt;&gt;
+Reasoning
+--
+# Type ReasoningInput
+# Type ReasoningOutput
+--
+# compute(c: ReasoningInput): ReasoningOutput</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>749</x>
+      <y>161</y>
+      <w>182</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Ascii
+--
+--
+# lie(c: Char): Int = 42
+# compute(c: Char): Int = c.toInt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>700</x>
+      <y>91</y>
+      <w>139</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;21;42;126;42;126;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>805</x>
+      <y>91</y>
+      <w>139</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>126;21;126;42;21;42;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>574</x>
+      <y>448</y>
+      <w>203</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>1) Modification du but de l'agent (ou non)
+2) Affichage sur la sortie standard
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>567</x>
+      <y>399</y>
+      <w>111</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;21;98;49</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>644</x>
+      <y>399</y>
+      <w>125</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>112;21;21;49</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>875</x>
+      <y>448</y>
+      <w>238</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Délégation à l'"ability" Reasoning (via compute)
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>1148</x>
+      <y>448</y>
+      <w>238</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Délégation à l'"ability" Lying (via lie)
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>980</x>
+      <y>399</y>
+      <w>34</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;21;21;49</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1246</x>
+      <y>399</y>
+      <w>35</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;21;21;49</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>623</x>
+      <y>14</y>
+      <w>434</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>scadia.ability
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>623</x>
+      <y>140</y>
+      <w>434</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>scadia.main
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>483</y>
+      <w>469</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt; &lt;&lt;trait&gt;&gt;
+MockupOpenInterrogationPatternReasoner
+{this: PatternReasonerDialogicalAgent}
+
+{innerclass
+MockupPartnerOpenInterrogation
+--
+--
+&lt;&lt;impl&gt;&gt;
+# playWaiting()
+# interpretQuestion(q: QuestionType, initiator: Interlocutor)
+# generateResponse(q: QuestionType, resolves: PropContent =&gt; Boolean): DialogicEvent
+# successReached(q: QuestionType, answerContent: PropContent)
+# failureReached(q: QuestionType)
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>203</x>
+      <y>322</y>
+      <w>475</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>462;21;462;35;252;35;252;147;21;147;21;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>203</x>
+      <y>322</y>
+      <w>944</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>931;21;931;35;252;35;252;147;21;147;21;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>259</x>
+      <y>644</y>
+      <w>203</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>1) Affichage sur la sortie standard
+2) Désactivation de l'agent
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>133</x>
+      <y>588</y>
+      <w>202</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;21;189;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>245</x>
+      <y>574</y>
+      <w>90</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;21;77;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>483</x>
+      <y>560</y>
+      <w>329</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Fonction du but de l'agent :
+soit, generateAnswer(...) + generateContent(...) (strategy)
+soit, generateExecNegativeAutoFB()
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>399</x>
+      <y>553</y>
+      <w>97</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>21;28;84;21</additional_attributes>
+  </element>
+</diagram>

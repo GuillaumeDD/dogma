@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>570</x>
+      <y>160</y>
+      <w>370</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+ScenarioRunner
+{this: ScenariiDB}
+--
+--
+&lt;&lt;abstract&gt;&gt;
+/+ play()/
+/# execute(handler: ScenarioHandlerBuilder)/
+&lt;&lt;impl&gt;&gt;
+# run(name: String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>330</x>
+      <y>30</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Scenario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>330</x>
+      <y>70</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ScenarioEventHandler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>160</y>
+      <w>520</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+ScenariiDB
+--
+- scenarii: Map[String, (Scenario, ScenarioEventHandlerBuilder)]
+--
++ add(name: String,
+       is: Scenario,
+       builder: ScenarioEventHandlerBuilder = defaultBuilder)
+&lt;&lt;abstract&gt;&gt;
+/+ defaultBuilder: ScenarioEventHandlerBuilder/
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+EventHandler
+--
+--
+/+ enqueue(e: ExternalEvent)/
+/+ events: Queue[ExternalEvent]/
+/+ processFirstEvent()/
+/+ processAllEvents()/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

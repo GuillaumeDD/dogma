@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>252</x>
+      <y>108</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Description/
+--
+--
+/+ isNegation: Boolean/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>270</x>
+      <y>306</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/EventDescription/
+--
+--
++ neg: EventDescription
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>270</x>
+      <y>405</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Negation
+--
+--
++ isNegation: Boolean
++ neg: EventDescription
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>81</x>
+      <y>306</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Alternative
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>441</x>
+      <y>207</y>
+      <w>162</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Conditional
+--
+--
++ operation: Operation
++ isNegation: Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>693</x>
+      <y>207</y>
+      <w>162</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>PersistentConditional
+--
+--
++ operation: Operation
++ isNegation: Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>207</x>
+      <y>234</y>
+      <w>152</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;27;45;135;45;135;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>297</x>
+      <y>144</y>
+      <w>224</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;27;45;207;45;207;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>297</x>
+      <y>144</y>
+      <w>494</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;27;45;477;45;477;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>657</x>
+      <y>126</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Operation/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>405</x>
+      <y>297</y>
+      <w>110</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+&lt;negates</panel_attributes>
+    <additional_attributes>27;27;63;27;63;144;27;144</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>18</x>
+      <y>297</y>
+      <w>269</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+combines left&gt;</panel_attributes>
+    <additional_attributes>252;27;207;27;207;81;27;81;27;27;63;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>171</x>
+      <y>207</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/EventsDescription/
+--
+--
++ isNegation: Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>117</x>
+      <y>234</y>
+      <w>134</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>117;27;117;45;27;45;27;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>18</x>
+      <y>180</y>
+      <w>170</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+combines right&gt;</panel_attributes>
+    <additional_attributes>153;45;81;45;81;126</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>225</x>
+      <y>144</y>
+      <w>116</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>99;27;99;45;27;45;27;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>180</y>
+      <w>170</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+premissed&gt;</panel_attributes>
+    <additional_attributes>27;45;153;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>261</x>
+      <y>198</y>
+      <w>457</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+premissed&gt;</panel_attributes>
+    <additional_attributes>27;63;27;72;396;72;396;27;432;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>396</x>
+      <y>36</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+Triggerable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>54</x>
+      <y>36</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+/Generator[Description, Event]/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>171</x>
+      <y>45</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>27;27;153;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>297</x>
+      <y>45</y>
+      <w>188</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>171;27;27;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>567</x>
+      <y>36</y>
+      <w>288</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;trait&gt;&gt;
+/Instantiable[Operation]/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>684</x>
+      <y>45</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>27;27;27;81</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>324</x>
+      <y>342</y>
+      <w>44</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;27;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>27</x>
+      <y>477</y>
+      <w>549</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/GenericDialogueActEventDescription[VariableType, GeneratedType &lt;: EventDescription]/
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>216</x>
+      <y>342</y>
+      <w>152</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>135;27;135;54;27;54;27;135</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>594</x>
+      <y>477</y>
+      <w>216</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/StraigthforwardEventDescription/
+--
+--
++ event: Event
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>171</x>
+      <y>585</y>
+      <w>423</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Description
+--
++ eventFromDescription(desc: Description): Option[Event]
++ eventDescriptionMatches(pred: Event =&gt; Boolean): Boolean
+bg=gray
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>324</x>
+      <y>342</y>
+      <w>395</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>27;27;27;54;378;54;378;135</additional_attributes>
+  </element>
+</diagram>

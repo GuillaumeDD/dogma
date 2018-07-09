@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>0</y>
+      <w>200</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+Dialogue
+{innerclass
+Time
+innerclass}
+--
+--
+# interlocutors: Set[Interlocutor]
+# reset()
+# gotToFuture(): Unit
++ currentTime: Time</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>16</x>
+      <y>0</y>
+      <w>128</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+SemanticTypes
+--
+Type ActionContent
+Type PropContent
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>144</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameInstances
+{innerclass
+GameID
+innerclass}
+{innerclass
+GameInstance
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>208</x>
+      <y>88</y>
+      <w>112</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>8</x>
+      <y>304</y>
+      <w>168</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+Commitments
+{innerclass
+CommitmentState
+innerclass}
+{innerclass
+Commitment
+innerclass}
+{innerclass
+PropositionalCommitment
+innerclass}
+{innerclass
+ActionCommitment
+innerclass}
+{innerclass
+GameActionCommitment
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>16</x>
+      <y>40</y>
+      <w>112</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;264</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>48</x>
+      <y>144</y>
+      <w>168</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>152;40;96;40;32;40;32;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>8</x>
+      <y>544</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+CommitmentStore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>408</y>
+      <w>118</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;136</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>184</x>
+      <y>544</y>
+      <w>176</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+CommitmentStoreOperations
+{innerclass
+CommitmentStoreOperation
+innerclass}
+{innerclass
+Cancel
+innerclass}
+{innerclass
+Create
+innerclass}
+{innerclass
+Failure
+innerclass}
+{innerclass
+Fulfill
+innerclass}
+{innerclass
+Identity
+innerclass}
+{innerclass
+Remove
+innerclass}
+{innerclass
+Violate
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>88</x>
+      <y>520</y>
+      <w>118</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>32;40;96;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>384</x>
+      <y>544</y>
+      <w>176</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+CommitmentStoreQueries</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>88</x>
+      <y>488</y>
+      <w>334</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>24;56;24;40;280;40;280;72;296;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>872</x>
+      <y>528</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+DialogueGameInstances
+{innerclass
+GameState
+innerclass}
+{innerclass
+DialogueGameState
+innerclass}
+{innerclass
+ContextualisationState
+innerclass}
+{innerclass
+DialogueGameInstance
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>304</x>
+      <y>192</y>
+      <w>664</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48;648;48;648;336</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>664</x>
+      <y>528</y>
+      <w>144</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+CommunicationGames
+{innerclass
+CommunicationGame
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>152</x>
+      <y>344</y>
+      <w>528</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>24;24;512;208</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>232</x>
+      <y>192</y>
+      <w>528</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>24;24;24;136;512;136;512;336</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>880</x>
+      <y>960</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+DialogueGames
+{innerclass
+Role
+innerclass}
+{innerclass
+DialogueGame
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>880</x>
+      <y>704</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameConditions
+{innerclass
+GameCondition
+innerclass}
+{innerclass
+BinaryCondition
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>552</y>
+      <w>896</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;184;880;184</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>928</x>
+      <y>744</y>
+      <w>40</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;216</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>376</x>
+      <y>1080</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameManager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>376</x>
+      <y>952</y>
+      <w>520</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>504;40;64;40;64;128</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>552</y>
+      <w>336</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>320;24;320;144;24;144;24;528</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>184</x>
+      <y>1256</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameManagerOperations
+{innerclass
+GameManagerOperation
+innerclass}
+{innerclass
+GenericOperationGenerator
+innerclass}
+{innerclass
+CancelGame
+innerclass}
+{innerclass
+CloseGame
+innerclass}
+{innerclass
+CreateSuggestedGame
+innerclass}
+{innerclass
+LoadGame
+innerclass}
+{innerclass
+Prioritize
+innerclass}
+{innerclass
+RemoveSuggestedGame
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>248</x>
+      <y>688</y>
+      <w>40</w>
+      <h>584</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;568</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>536</x>
+      <y>1080</y>
+      <w>168</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameManagerQueries</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>448</x>
+      <y>1056</y>
+      <w>118</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>40;40;88;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>1056</y>
+      <w>152</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>136;40;64;40;64;200</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>864</x>
+      <y>1168</y>
+      <w>192</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameFactories
+{innerclass
+GameFactory
+innerclass}
+{innerclass
+CommunicationGameFactory
+innerclass}
+{innerclass
+DialogueGameInstanceFactory
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>888</x>
+      <y>1008</y>
+      <w>118</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>704</x>
+      <y>552</y>
+      <w>176</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>64;24;64;664;160;664</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>864</x>
+      <y>1312</y>
+      <w>192</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+GameRepositories</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>1224</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>328</x>
+      <y>1288</y>
+      <w>552</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>536;40;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>432</x>
+      <y>0</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+InternalEventGenerator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>128</x>
+      <y>1488</y>
+      <w>288</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+ContextualisationOperations
+{innerclass
+CancelGameWithContextualisation
+innerclass}
+{innerclass
+ConnectDialogueGamesWithEntryConditions
+innerclass}
+{innerclass
+ConnectDialogueGamesWithSuccessConditions
+innerclass}
+{innerclass
+CreateGame
+innerclass}
+{innerclass
+ExitGameGeneration
+innerclass}
+{innerclass
+PropEntreeGeneration
+innerclass}
+{innerclass
+PropEntreePersistence
+innerclass}
+{innerclass
+RemoveContextualisationCommitment
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>1400</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>544</x>
+      <y>1504</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+ContextualisationGame
+{innerclass
+ContextualisationGame
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>392</x>
+      <y>1480</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>24;40;152;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>392</x>
+      <y>1504</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>152;40;24;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1000</x>
+      <y>568</y>
+      <w>134</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>24;24;80;24;80;432;24;432</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1112</x>
+      <y>824</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+CommitmentConditions
+{innerclass
+ExistActionCommitment
+innerclass}
+{innerclass
+ExistCommitment
+innerclass}
+{innerclass
+ExistPropositionalCommitment
+innerclass}
+{innerclass
+InactiveActionCommitment
+innerclass}
+{innerclass
+InactivePropositionalCommitment
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>928</x>
+      <y>744</y>
+      <w>296</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;56;280;56;280;80</additional_attributes>
+  </element>
+</diagram>
