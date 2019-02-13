@@ -193,6 +193,7 @@ trait CommitmentStoreOperations extends LazyLogging {
       if (!commitment.instantiated)
         logger.warn(s"Failure : adding an uninstantiated commitment ! ($newCommitment)")
 
+      remove(commitment)
       add(newCommitment)
     }
     // Instantiation
