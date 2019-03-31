@@ -1,6 +1,6 @@
 name := "Dogma"
 
-version := "0.42"
+version := "0.43"
 
 scalaVersion := "2.11.1"
 
